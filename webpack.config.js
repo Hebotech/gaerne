@@ -1,24 +1,28 @@
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const path = require("path");
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const path = require('path');
 
-const mode = process.env.NODE_ENV || "development";
-const prod = mode === "production";
+const mode = process.env.NODE_ENV || 'development';
+const prod = mode === 'production';
 
 module.exports = {
   entry: {
-    bundle: ["./src/main.js"],
+    bundle: ['./src/main.js'],
   },
   resolve: {
     alias: {
-      svelte: path.resolve("node_modules", "svelte"),
+      Atoms: path.resolve(__dirname, './src/components/Atoms'),
+      Molecules: path.resolve(__dirname, './src/components/Molecules'),
+      Organisms: path.resolve(__dirname, './src/components/Organisms'),
+      Utilities: path.resolve(__dirname, './src/components/Utilities'),
+      svelte: path.resolve('node_modules', 'svelte'),
     },
-    extensions: [".mjs", ".js", ".svelte"],
-    mainFields: ["svelte", "browser", "module", "main"],
+    extensions: ['.mjs', '.js', '.svelte'],
+    mainFields: ['svelte', 'browser', 'module', 'main'],
   },
   output: {
-    path: __dirname + "/public",
-    filename: "[name].js",
-    chunkFilename: "[name].[id].js",
+    path: __dirname + '/public',
+    filename: '[name].js',
+    chunkFilename: '[name].[id].js',
   },
 
   module: {
@@ -26,28 +30,28 @@ module.exports = {
       {
         test: /\.css$/,
         sideEffects: true,
-        use: ["style-loader", "css-loader", "sass-loader"],
+        use: ['style-loader', 'css-loader'],
       },
       {
         test: /\.s[ac]ss$/i,
         use: [
           // Creates `style` nodes from JS strings
-          "style-loader",
+          'style-loader',
           // Translates CSS into CommonJS
-          "css-loader",
+          'css-loader',
           // Compiles Sass to CSS
-          "sass-loader",
+          'sass-loader',
         ],
         sideEffects: true,
       },
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/,
-        use: ["file-loader"],
+        use: ['file-loader'],
       },
       {
         test: /\.svelte$/,
         use: {
-          loader: "svelte-loader",
+          loader: 'svelte-loader',
           options: {
             emitCss: true,
             hotReload: true,
@@ -57,8 +61,8 @@ module.exports = {
       {
         test: /\.css$/,
         use: [
-          prod ? MiniCssExtractPlugin.loader : "style-loader",
-          "css-loader",
+          prod ? MiniCssExtractPlugin.loader : 'style-loader',
+          'css-loader',
         ],
       },
     ],
@@ -66,8 +70,8 @@ module.exports = {
   mode,
   plugins: [
     new MiniCssExtractPlugin({
-      filename: "[name].css",
+      filename: '[name].css',
     }),
   ],
-  devtool: prod ? false : "source-map",
+  devtool: prod ? false : 'source-map',
 };
