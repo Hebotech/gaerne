@@ -1,22 +1,11 @@
 {
-  "name": "gaerne",
+  "name": "svelte-app",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "build": "rollup -c",
     "dev": "rollup -c -w",
     "start": "sirv public"
   },
-  "keywords": [
-    "svelte",
-    "js",
-    "frontend",
-    "javascript"
-  ],
-  "author": "irfdev",
-  "license": "ISC",
   "devDependencies": {
     "@rollup/plugin-commonjs": "^14.0.0",
     "@rollup/plugin-node-resolve": "^8.0.0",
