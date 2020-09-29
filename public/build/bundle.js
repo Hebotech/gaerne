@@ -285,7 +285,7 @@ var app = (function () {
     		c: function create() {
     			h1 = element("h1");
     			h1.textContent = `Hello ${/*name*/ ctx[0]}!`;
-    			add_location(h1, file, 4, 0, 41);
+    			add_location(h1, file, 4, 0, 42);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
