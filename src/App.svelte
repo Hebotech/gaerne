@@ -1,5 +1,12 @@
 <script>
-  let name = "world";
+  let name = "world adisaomdioas";
 </script>
 
-<h1>Hello {name}!</h1>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-12 text-center">
+      <h1 class="text-center">Hello {name}</h1>
+      <h4>Holaa</h4>
+    </div>
+  </div>
+</div>
