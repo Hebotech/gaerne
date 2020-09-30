@@ -19,7 +19,7 @@
     z-index: 11;
     position: relative;
     overflow: hidden;
-    margin: 5em;
+    margin: 2em 5em;
     background-color: #fff;
     border-radius: 8px;
   }

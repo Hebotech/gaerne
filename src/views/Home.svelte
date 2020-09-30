@@ -1,5 +1,6 @@
 <script>
   import HeroHeader from 'Organisms/Home/HeroHeader';
+  import CategoriesListing from 'Organisms/Home/CategoriesListing';
 </script>
 
 <style>
@@ -8,7 +9,5 @@
 
 <div class="container-fluid">
   <HeroHeader />
-  <div class="row">
-    <div class="col-12 text-center" />
-  </div>
+  <CategoriesListing />
 </div>
