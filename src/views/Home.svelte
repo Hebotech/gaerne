@@ -1,5 +1,5 @@
 <script>
-  // your script goes here
+  import HeroHeader from 'Organisms/Home/HeroHeader';
 </script>
 
 <style>
@@ -7,13 +7,8 @@
 </style>
 
 <div class="container-fluid">
+  <HeroHeader />
   <div class="row">
-    <div class="col-6">
-      <h3>
-        Hola
-        <p>Qu</p>
-      </h3>
-    </div>
-    <div class="col-6" />
+    <div class="col-12 text-center" />
   </div>
 </div>

@@ -31,6 +31,8 @@
     "webpack-dev-server": "^3.3.1"
   },
   "dependencies": {
+    "gsap": "^3.5.1",
+    "particles.js": "^2.0.0",
     "sass-loader": "^10.0.2",
     "svelte-routing": "^1.4.2"
   }
