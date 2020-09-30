@@ -8,3 +8,10 @@ canvas {
 body {
   position: relative;
 }
+
+.redShadow {
+  text-shadow: -3px 0 red;
+}
+.greenShadow {
+  text-shadow: -3px 0 red;
+}
