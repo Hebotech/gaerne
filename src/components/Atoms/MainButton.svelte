@@ -1,4 +1,12 @@
 <script>
+  import { createEventDispatcher } from "svelte";
+
+  const dispatch = createEventDispatcher();
+
+  function clicked() {
+    dispatch("clicked");
+  }
+
   export let content;
 </script>
 
@@ -6,6 +14,6 @@
 </style>
 
 <!-- markup (zero or more items) goes here -->
-<button class="main-button">
+<button on:click={clicked} class="main-button">
   {content}
 </button>

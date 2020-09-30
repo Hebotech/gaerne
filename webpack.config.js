@@ -8,6 +8,7 @@ module.exports = {
   entry: {
     bundle: ['./src/main.js'],
   },
+
   resolve: {
     alias: {
       Atoms: path.resolve(__dirname, './src/components/Atoms'),
@@ -19,6 +20,7 @@ module.exports = {
     extensions: ['.mjs', '.js', '.svelte'],
     mainFields: ['svelte', 'browser', 'module', 'main'],
   },
+
   output: {
     path: __dirname + '/public',
     filename: '[name].js',
@@ -67,7 +69,14 @@ module.exports = {
       },
     ],
   },
+
   mode,
+
+  devServer: {
+    port: 5000,
+    hotOnly: true,
+  },
+
   plugins: [
     new MiniCssExtractPlugin({
       filename: '[name].css',
