@@ -2,7 +2,6 @@
   import { Link } from 'svelte-routing';
   import { getContext } from 'svelte';
   import { ROUTER } from 'svelte-routing/src/contexts';
-  import { stringify } from 'querystring';
   let { activeRoute } = getContext(ROUTER);
 
   let routePath;
