@@ -1,6 +1,7 @@
 <script>
   import HeroHeader from 'Organisms/Home/HeroHeader';
   import CategoriesListing from 'Organisms/Home/CategoriesListing';
+  import ProductListing from 'Organisms/Home/ProductListing';
 </script>
 
 <style>
@@ -10,4 +11,5 @@
 <div class="container-fluid">
   <HeroHeader />
   <CategoriesListing />
+  <ProductListing />
 </div>
