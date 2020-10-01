@@ -1,7 +1,9 @@
 <script>
   import HeroHeader from 'Organisms/Category/HeroHeader';
+  import ProductListing from 'Organisms/Home/ProductListing';
 
   export let name;
+
   $: categoryObject = {
     name: 'Enduro',
     image: '/images/gaerne-showcase.jpg',
@@ -54,10 +56,5 @@
 
 <div class="container-fluid text-center">
   <HeroHeader {...categoryObject} />
-  <div class="row">
-    <div class="col-12">
-      <h1>{name}</h1>
-      <p>Justo éste es el nombre de la categoría <strong> {name} </strong></p>
-    </div>
-  </div>
+  <ProductListing products={categoryObject.products} />
 </div>
