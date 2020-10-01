@@ -7,7 +7,7 @@
     background-color: #333;
     color: white;
   }
-  .row .footer-content {
+  .footer-content {
     padding: 2%;
   }
   .main-footer ul {
@@ -16,22 +16,32 @@
     padding-inline-end: none;
   }
   .main-footer .brand {
+    align-items: center;
+    padding: 2% 0;
     background-color: #f5d315;
+    font-size: 2em;
+    color: black;
+    font-weight: 700;
+  }
+  .main-footer .brand img {
+    filter: invert(100%);
   }
 </style>
 
 <!-- markup (zero or more items) goes here -->
 <footer class="container-fluid main-footer">
-  <div class="row">
-    <div class="col-12 brand justify-content-center text-center">
+  <div class="row brand justify-content-center ">
+    <div class="col-3 text-center">
       <img src="/images/logo.png" alt="logo gaerne" class="img-fluid">
-      Boots co
+      <h3 >
+        THE BOOTS CO
+      </h3>
     </div>
     
   </div>
   <div class="row m-0 justify-content-between align-items-center footer-content">
     <div class="col-5">
-      <img src="/images/logo.png" alt="logo gaerne" class="img-fluid mb-4">
+
       <p>
         Gaerne es una marca Italiana de alta gama especializada en productos para moto con altas intenciones en ser grandes
       </p>

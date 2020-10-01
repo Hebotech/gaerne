@@ -5,16 +5,20 @@
 
 <style>
   .col {
-    flex-basis: 33%;
-    margin: 0.5%;
+    flex-basis: 27%;
+    margin: 2%;
+    padding: 2%;
+    color: white;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
   }
   .col:last-of-type {
     flex-basis: 100%;
-    max-height: 50% !important;
+    padding: 10%;
+    max-height: 5em !important;
   }
-  .card {
-    border-radius: none;
-  }
+
   .main-btn {
     font-family: Open sans;
     font-weight: 700;
@@ -22,7 +26,7 @@
     background-color: #f5d315;
     color: #333333;
     border: solid 1.9px #333333;
-    padding: 2% 1%;
+    padding: 2% 14%;
     transition: all 0.3s ease-in;
   }
   .main-btn:hover {
@@ -32,21 +36,16 @@
   }
 </style>
 
-<div class="col ">
-  <div class="card bg-dark text-white text-center">
-    <img
-      class="card-img"
-      src={card.image}
-      alt={`Bota gaerne ${card.description}`} />
-    <div
-      class="d-flex flex-column card-img-overlay align-self-center justify-content-center">
-      <h5 class="card-title">{card.name}</h5>
-      <p class="card-text">{card.description}</p>
-      <button
-        class="main-btn"
-        on:click={() => navigate(`/categoria/${card.name}`)}>
-        Ir ahora
-      </button>
-    </div>
+<div
+  class="col justify-content-center d-flex align-items-center"
+  style={`background-image: url(${card.image})`}>
+  <div>
+    <h5>{card.name}</h5>
+    <p>{card.description}</p>
+    <button
+      class="main-btn"
+      on:click={() => navigate(`/categoria/${card.name}`)}>
+      Ir ahora
+    </button>
   </div>
 </div>
