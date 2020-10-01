@@ -14,12 +14,10 @@
 </script>
 
 <style>
-  .active {
-    font-weight: bolder;
-    font-size: 103%;
-    text-decoration: underline;
-    transition: all ease-in-out 0.5s;
+  .navbar {
+    background-color: #f5d315;
   }
+
   .col {
     font-weight: 700;
     font-family: Open Sans;
@@ -35,12 +33,12 @@
     margin: auto;
     min-width: 100%;
     min-height: 100%;
-    padding: 3% 0;
-    color: #333;
+    padding: 4% 0;
+    color: #000;
     cursor: pointer;
     background-color: #f5d315;
     border: none;
-    transition: all 0.5s ease-in;
+    transition: all 0.3s ease-in;
   }
 
   .col .nav-link:hover {
@@ -50,7 +48,13 @@
   }
 
   .col .nav-link {
-    border-left: solid 2.5px #333 !important;
+    border-left: solid 2.5px #000;
+  }
+  .col .nav-link.active {
+    font-weight: bolder;
+    font-size: 108%;
+    text-decoration: underline;
+    transition: all ease-in 0.2s;
   }
 </style>
 
