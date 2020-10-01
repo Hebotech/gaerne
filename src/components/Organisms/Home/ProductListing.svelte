@@ -3,39 +3,39 @@
 
   let products = [
     {
-      name: 'Enduro',
+      name: 'SG-12',
       description: 'Lo mejor que puede haber en la historia',
       images: ['http://www.gaerne.com/images/articoli/boots/2174_073.jpg'],
     },
     {
-      name: 'Trial',
+      name: 'SG-14',
       description: 'Lo mejor que puede haber en la historia',
       images: ['http://www.gaerne.com/images/articoli/boots/2174_079.jpg'],
     },
 
     {
-      name: 'Enduro',
+      name: 'SH-212',
       description: 'Lo mejor que puede haber en la historia',
       images: ['http://www.gaerne.com/images/articoli/boots/2174_073.jpg'],
     },
     {
-      name: 'Trial',
+      name: 'SH3812',
       description: 'Lo mejor que puede haber en la historia',
       images: ['http://www.gaerne.com/images/articoli/boots/2174_079.jpg'],
     },
     {
-      name: 'Trial',
+      name: 'SH315',
       description: 'Lo mejor que puede haber en la historia',
       images: ['http://www.gaerne.com/images/articoli/boots/2174_079.jpg'],
     },
 
     {
-      name: 'Enduro',
+      name: 'SH-319',
       description: 'Lo mejor que puede haber en la historia',
       images: ['http://www.gaerne.com/images/articoli/boots/2174_073.jpg'],
     },
     {
-      name: 'Trial',
+      name: 'SH-320',
       description: 'Lo mejor que puede haber en la historia',
       images: ['http://www.gaerne.com/images/articoli/boots/2174_079.jpg'],
     },
