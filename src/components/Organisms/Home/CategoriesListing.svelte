@@ -4,14 +4,14 @@
 
   let cards = [
     {
-      name: 'Enduro',
+      name: 'Todoterreno',
       description: 'Lo mejor que puede haber en la historia',
-      image: 'http://www.gaerne.com/images/articoli/boots/2174_073.jpg',
+      image: 'http://www.gaerne.com/images/pictures/post-sg12-.jpg',
     },
     {
-      name: 'Trial',
+      name: 'Todoterreno',
       description: 'Lo mejor que puede haber en la historia',
-      image: 'http://www.gaerne.com/images/articoli/boots/2174_079.jpg',
+      image: 'http://www.gaerne.com/images/pictures/post-sg12-.jpg',
     },
     {
       name: 'Todoterreno',
@@ -24,7 +24,7 @@
 <style>
 </style>
 
-<div class="row justify-content-around mt-4 mb-4 text-center">
+<div class="row justify-content-center mt-4 mb-4 text-center">
   <div class="col-12">
     <h2>Categories</h2>
   </div>

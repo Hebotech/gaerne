@@ -1,11 +1,14 @@
 <script>
   import { Router, Route } from 'svelte-routing';
+
   import Home from './views/Home';
   import Categories from './views/Categories';
   import Contact from './views/Contact';
   import Product from './views/Product';
-  import Navbar from 'Organisms/Navbar';
+
   import Particle from 'Organisms/ParticleBackground';
+  import Navbar from 'Organisms/Navbar';
+  import MainFooter from 'Organisms/MainFooter';
 
   let showButton = false;
 
@@ -36,6 +39,7 @@
       <Product name={params.name} />
     </Route>
     <Route path="/contacto" component={Contact} />
+    <MainFooter />
   </main>
   <Particle />
 </Router>
