@@ -11,9 +11,8 @@
 </style>
 
 <!-- markup (zero or more items) goes here -->
-<div class="row">
-  <div class="col-6 bg-sectio"/>
-  <div class="col-12">
+<div class="row justify-content-center align-items-center">
+  <div class="col-md-6 col-12">
     <ContactForm/>
   </div>
 </div>
