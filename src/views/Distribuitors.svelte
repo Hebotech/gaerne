@@ -85,13 +85,16 @@
 <div class="container-fluid mt-5 mb-5">
   <div class="row m-0 justify-content-center">
     <div class="col-12 text-center">
-      <h1>Distribuidores oficiales</h1>
+      <h1>Premium</h1>
     </div>
     {#each favDistribuitors as distribuitor, i (i)}
       <DistribuitorCard {...distribuitor} />
     {/each}
   </div>
   <div class="row m-0 justify-content-center">
+    <div class="col-12 text-center">
+      <h1>Distribuidores</h1>
+    </div>
     {#each regularDistribuitors as distribuitor, i (i)}
       <DistribuitorCard {...distribuitor} />
     {/each}

@@ -16,7 +16,7 @@
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 80vh;
+    height: 60vh;
   }
   .contact-view h1 {
     color: #f4d316;

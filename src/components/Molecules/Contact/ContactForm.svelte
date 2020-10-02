@@ -32,16 +32,28 @@
 <form class="contact ">
   <div class="form-row">
     <div class="form-group col-md-6">
-      <!-- <label for="inputPassword4">Nombre</label> -->
-      <input placeholder="Nombre" type="name" class="form-control" id="inputPassword4" />
+      <input
+        placeholder="Nombre"
+        type="name"
+        class="form-control"
+        id="inputName" />
     </div>
     <div class="form-group col-md-6">
-      <!-- <label for="inputEmail4">Email</label> -->
-      <input placeholder="E-mail" type="email" class="form-control" id="inputEmail4" />
+      <input
+        placeholder="E-mail"
+        type="email"
+        class="form-control"
+        id="inputEmail" />
+    </div>
+    <div class="form-group col-md-12">
+      <input
+        placeholder="Teléfono"
+        type="phone"
+        class="form-control"
+        id="inputPhone" />
     </div>
 
     <div class="form-group col-md-12">
-      <!-- <label for="inputMessage">Mensaje</label> -->
       <textarea
         placeholder="Mensaje"
         class="form-control"

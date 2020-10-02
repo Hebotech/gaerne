@@ -9,7 +9,7 @@
   /* your styles go here */
 </style>
 
-<div class="row mt-5 mb-5 m-0 justify-content-around align-items-stretch">
+<div class="row p-5 mt-5 mb-5 m-0 justify-content-around align-items-stretch">
   {#if isCategory}
     <div class="col-12 text-center">
       <h2>Nueva temporada</h2>

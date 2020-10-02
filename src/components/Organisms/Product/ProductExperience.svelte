@@ -14,7 +14,6 @@
   });
 
   $: activeIndex = 0;
-  $: activeImage = imagesArray[activeIndex];
   $: inActiveImages = imagesArray.filter(
     (image) => image.imageIndex !== activeIndex
   );
@@ -26,19 +25,29 @@
 
 <style>
   .product-description {
-    height: 100%;
+    min-height: 100%;
+  }
+  .product-description h1 {
+    font-family: Cousine;
+    font-weight: 700;
+  }
+  .product-description h3 {
+    font-family: Cousine;
+  }
+  .product-description p {
+    font-family: Open Sans;
   }
   .contentt {
     position: sticky;
     position: -webkit-sticky;
-    top: 0;
+    top: 25%;
   }
   .inactive-image {
-    padding: 25%;
+    padding: 15%;
     width: 100%;
     height: 100%;
     background-size: contain;
-    flex-basis: 3%;
+    flex-basis: 1%;
     cursor: pointer;
     background-repeat: no-repeat;
   }
@@ -52,8 +61,8 @@
 
   .product-showcase {
     display: flex;
-    flex-flow: nowrap row;
-    overflow: auto;
+    flex-flow: wrap row;
+    justify-content: space-around;
   }
   .product-images {
     cursor: pointer;
@@ -62,8 +71,8 @@
 
 <!-- markup (zero or more items) goes here -->
 
-<div class="row">
-  <div class={`product-description col-md-4 col-12 text-center ${zoom?'order-md-1' :'order-md-0'} order-1`}>
+<div class="row position-relative p-5">
+  <div class={`product-description col-md-4 col-12 text-md-right text-center ${zoom?'order-md-1' :'order-md-0'} order-1`}>
     <div class="contentt align-self-end">
       <h1>
         {name}
@@ -80,14 +89,8 @@
     </div>
   </div>
   <div on:click={()=> zoom = !zoom} class={`col-12 product-images order-0 ${zoom?'oder-md-0' :'col-md-8 order-md-1'}`}>
-    <!-- <div class="active-image" style={`background-image: url(${activeImage.image})`}/> -->
     {#each imagesArray as image (image.imageIndex)}
       <img loading="lazy" src={image.image} alt={`Gaerne botas ${name}`} class="img-fluid">
       {/each}
-  </div>
-  <div class="col-12 order-3">
-    <p>
-      {longDescription}
-    </p>
   </div>
 </div>

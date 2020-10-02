@@ -22,7 +22,6 @@
   .main-content {
     z-index: 11;
     position: relative;
-    overflow: hidden;
     margin: 2em 5em;
     background-color: #fff;
     border-radius: 0px 0px 8px 8px;

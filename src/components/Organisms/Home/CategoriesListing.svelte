@@ -24,7 +24,7 @@
 <style>
 </style>
 
-<div class="row justify-content-center mt-4 mb-4 text-center">
+<div class="row p-5 justify-content-center mt-4 mb-4 text-center">
   <div class="col-12">
     <h2>Categories</h2>
   </div>

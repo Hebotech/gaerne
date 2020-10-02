@@ -54,7 +54,7 @@
 <style>
 </style>
 
-<div class="container-fluid text-center">
+<div class="container-fluid text-center p-0">
   <HeroHeader {...categoryObject} />
   <ProductListing products={categoryObject.products} />
 </div>
