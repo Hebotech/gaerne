@@ -40,7 +40,7 @@
   .contentt {
     position: sticky;
     position: -webkit-sticky;
-    top: 25%;
+    top: 10%;
     background-image: url(/background-line.svg);
     background-size: contain;
     background-repeat: no-repeat;

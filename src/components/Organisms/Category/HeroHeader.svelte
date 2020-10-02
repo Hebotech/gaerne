@@ -14,10 +14,13 @@
     color: white;
     transition: all 0.5s ease-in;
   }
+  .hero-category h1 {
+    font-family: Cousine;
+  }
 
   .hero-category:hover {
     transition: all 0.5s ease-out;
-    background-position: 55% 52%;
+    background-position: 55% 50.9%;
   }
 </style>
 

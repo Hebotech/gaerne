@@ -26,6 +26,9 @@
     border-radius: 10px;
     transition: all 0.5s ease-out;
   }
+  .card .link-to {
+    color: #000 !important;
+  }
 </style>
 
 <div class="col-md-3 col-4 mt-md-3 mb-md-3 align-self text-center product-col">
@@ -40,7 +43,13 @@
     </div>
     <div class="card-body">
       <h5 class="card-title">
-        <Link to={`/producto/${product.name}`}>{product.name}</Link>
+        <Link
+          getProps={() => {
+            return { class: 'link-to' };
+          }}
+          to={`/producto/${product.name}`}>
+          {product.name}
+        </Link>
       </h5>
       <p class="card-text">{product.description}</p>
     </div>

@@ -85,18 +85,18 @@
   </div>
   <div class="col">
     <button
-      on:click={() => navigate('/contacto')}
-      class:active={pathUri.includes('/contacto')}
-      class="nav-link">
-      Contacto
-    </button>
-  </div>
-  <div class="col">
-    <button
       on:click={() => navigate('/distribuidores')}
       class:active={pathUri.includes('/distribuidores')}
       class="nav-link">
       distribuidores
+    </button>
+  </div>
+  <div class="col">
+    <button
+      on:click={() => navigate('/contacto')}
+      class:active={pathUri.includes('/contacto')}
+      class="nav-link">
+      Contacto
     </button>
   </div>
 </nav>
