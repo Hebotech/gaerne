@@ -91,7 +91,7 @@
       <DistribuitorCard {...distribuitor} />
     {/each}
   </div>
-  <div class="row m-0 justify-content-around">
+  <div class="row m-0 justify-content-center">
     {#each regularDistribuitors as distribuitor, i (i)}
       <DistribuitorCard {...distribuitor} />
     {/each}
