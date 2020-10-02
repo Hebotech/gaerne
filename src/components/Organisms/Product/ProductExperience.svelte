@@ -41,6 +41,11 @@
     position: sticky;
     position: -webkit-sticky;
     top: 25%;
+    background-image: url(/background-line.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    padding: 15% 15% 15% 0;
   }
   .inactive-image {
     padding: 15%;
@@ -71,7 +76,7 @@
 
 <!-- markup (zero or more items) goes here -->
 
-<div class="row position-relative p-5">
+<div class="row position-relative p-3">
   <div class={`product-description col-md-4 col-12 text-md-right text-center ${zoom?'order-md-1' :'order-md-0'} order-1`}>
     <div class="contentt align-self-end">
       <h1>

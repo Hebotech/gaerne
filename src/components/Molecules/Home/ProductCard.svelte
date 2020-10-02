@@ -13,7 +13,7 @@
     height: 100%;
     border: none;
     transition: all 0.3s ease-in;
-    clip-path: polygon(0 0, 100% 0, 100% 85%, 89% 100%, 10% 100%, 0 87%);
+    clip-path: polygon(0 0, 100% 0, 100% 86%, 86% 100%, 12% 100%, 0 86%);
   }
 
   .card:hover {

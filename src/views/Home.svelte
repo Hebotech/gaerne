@@ -51,5 +51,8 @@
 <div class="container-fluid">
   <HeroHeader />
   <CategoriesListing />
+  <div class="col-12 text-center">
+    <h2>Productos favoritos</h2>
+  </div>
   <ProductListing {products} />
 </div>

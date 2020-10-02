@@ -26,6 +26,13 @@
     background-color: #fff;
     border-radius: 0px 0px 8px 8px;
   }
+  :global(h1, h2, h3, h4, h5) {
+    font-family: Cousine;
+    font-weight: 700;
+  }
+  :global(p, small, div, span) {
+    font-family: Open Sans;
+  }
 </style>
 
 <Router>

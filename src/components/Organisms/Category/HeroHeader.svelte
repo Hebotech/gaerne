@@ -10,7 +10,7 @@
     background-position: center center;
     background-size: cover;
     clip-rule: evenodd;
-    clip-path: polygon(13% 0, 100% 0, 100% 72%, 88% 100%, 0 100%, 0 24%);
+    clip-path: polygon(4% 0, 100% 0, 100% 85%, 96% 100%, 0 100%, 0 12%);
     color: white;
     transition: all 0.5s ease-in;
   }
