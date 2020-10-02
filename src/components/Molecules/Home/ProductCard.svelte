@@ -26,22 +26,16 @@
     border-radius: 10px;
     transition: all 0.5s ease-out;
   }
-  /* 
-  .product-col {
-    transition: all 5s ease-out;
-     clip-path: polygon(); 
-  }
-  .product-col:hover {
-clip-path: polygon(16% 0, 100% 0, 100% 85%, 89% 100%, 0 100%, 0 14%); 
-    transition: all 5s ease-in;
-  } */
 </style>
 
 <div class="col-md-3 col-4 mt-md-3 mb-md-3 align-self text-center product-col">
   <div class="card">
     <div class="card-img-top">
       <Link to={`/producto/${product.name}`}>
-        <img src={product.images[0]} alt="" class="img-fluid" />
+        <img
+          src={product.images[0]}
+          alt={`Gaerne Bota ${product.name}`}
+          class="img-fluid" />
       </Link>
     </div>
     <div class="card-body">

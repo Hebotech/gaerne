@@ -1,11 +1,52 @@
 <script>
   import { navigate } from 'svelte-routing';
   import ProductExperience from 'Organisms/Product/ProductExperience';
-  import Categories from './Categories.svelte';
+  import RelatedProducts from 'Organisms/Product/RelatedProducts';
 
   export let name;
 
-  $: categoryName = 'Enduro';
+  $: category = {
+    name: 'Enduro',
+    products: [
+      {
+        name: 'SG-12',
+        description: 'Lo mejor que puede haber en la historia',
+        images: ['http://www.gaerne.com/images/articoli/boots/2174_073.jpg'],
+      },
+      {
+        name: 'SG-14',
+        description: 'Lo mejor que puede haber en la historia',
+        images: ['http://www.gaerne.com/images/articoli/boots/2174_079.jpg'],
+      },
+
+      {
+        name: 'SH-212',
+        description: 'Lo mejor que puede haber en la historia',
+        images: ['http://www.gaerne.com/images/articoli/boots/2174_073.jpg'],
+      },
+      {
+        name: 'SH3812',
+        description: 'Lo mejor que puede haber en la historia',
+        images: ['http://www.gaerne.com/images/articoli/boots/2174_079.jpg'],
+      },
+      {
+        name: 'SH315',
+        description: 'Lo mejor que puede haber en la historia',
+        images: ['http://www.gaerne.com/images/articoli/boots/2174_079.jpg'],
+      },
+
+      {
+        name: 'SH-319',
+        description: 'Lo mejor que puede haber en la historia',
+        images: ['http://www.gaerne.com/images/articoli/boots/2174_073.jpg'],
+      },
+      {
+        name: 'SH-320',
+        description: 'Lo mejor que puede haber en la historia',
+        images: ['http://www.gaerne.com/images/articoli/boots/2174_079.jpg'],
+      },
+    ],
+  };
   let product = {
     name: 'SG-12',
     shortDescription: 'Lo mejor que puede haber en la historia',
@@ -23,34 +64,42 @@
 <style>
   .label {
     background-color: #000;
+    padding: 0.5% 0;
+    justify-self: flex-end;
+  }
+  .label span {
     cursor: pointer;
-    padding: 1% 0;
+  }
+  .label span:hover {
+    text-decoration: underline;
   }
   .label h4 {
     color: white;
-    font-family: 'Cousine';
+    font-family: Cousine;
+  }
+  .label span {
     transition: all 0.5s ease-in;
     font-weight: 400;
   }
-  .label:hover h4 {
+  .label:hover span {
     transition: all 0.5s ease-out;
-    font-weight: bolder;
+    font-weight: 700;
   }
 </style>
 
 <!-- markup (zero or more items) goes here -->
 
 <div class="container-fluid text-center">
-  <div class="row">
-    <div class="col-2 label" on:click={()=>navigate(`/categoria/${categoryName}`)}>
+  <div class="row justify-content-end">
+    <div class="col-4 label">
       <h4>
-          {categoryName}
+        <span on:click={()=>navigate(`/categoria/${category.name}`)}>
+          {category.name}
+        </span>
+           / {product.name}
       </h4>
-    </div>
-    <div class="col-12 text-center">
-      <h1>{name}</h1>
-      <h3>{product.shortDescription}</h3>
     </div>
   </div>
 <ProductExperience {...product}/>
+<RelatedProducts products={category.products}/>
 </div>

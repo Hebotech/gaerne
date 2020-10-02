@@ -1,4 +1,5 @@
 <script>
+  export let name;
   export let shortDescription;
   export let images;
   export let longDescription;
@@ -49,6 +50,12 @@
 
 <div class="row">
   <div class="col-5 text-center">
+    <h1>
+      {name}
+    </h1>
+    <h3>
+      {shortDescription}
+    </h3>
     <div class="product-showcase">
       {#each inActiveImages as image (image.imageIndex)}
         <div on:click={activateImage(image.imageIndex)} class="inactive-image" style={`background-image: url(${image.image})`}/>

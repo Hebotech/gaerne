@@ -1,0 +1,99 @@
+<script>
+  import DistribuitorCard from 'Molecules/DistribuitorCard';
+
+  let distribuitors = [
+    {
+      name: 'Hebotechno',
+      description: 'Importadora de productos europeos para motos',
+      website: 'https://mundohebotech.com',
+      isFav: true,
+    },
+    {
+      name: 'Hebotechno',
+      description: 'Importadora de productos europeos para motos',
+      website: 'https://mundohebotech.com',
+      isFav: true,
+    },
+    {
+      name: 'Hebotechno',
+      description: 'Importadora de productos europeos para motos',
+      website: 'https://mundohebotech.com',
+      isFav: true,
+    },
+    {
+      name: 'Hebotechno',
+      description: 'Importadora de productos europeos para motos',
+      website: 'https://mundohebotech.com',
+      isFav: true,
+    },
+    {
+      name: 'Hebotechno',
+      description: 'Importadora de productos europeos para motos',
+      website: 'https://mundohebotech.com',
+      isFav: true,
+    },
+    {
+      name: 'Hebotechno',
+      description: 'Importadora de productos europeos para motos',
+      website: 'https://mundohebotech.com',
+      isFav: false,
+    },
+    {
+      name: 'Hebotechno',
+      description: 'Importadora de productos europeos para motos',
+      website: 'https://mundohebotech.com',
+      isFav: false,
+    },
+    {
+      name: 'Hebotechno',
+      description: 'Importadora de productos europeos para motos',
+      website: 'https://mundohebotech.com',
+      isFav: false,
+    },
+    {
+      name: 'Hebotechno',
+      description: 'Importadora de productos europeos para motos',
+      website: 'https://mundohebotech.com',
+      isFav: false,
+    },
+    {
+      name: 'Hebotechno',
+      description: 'Importadora de productos europeos para motos',
+      website: 'https://mundohebotech.com',
+      isFav: false,
+    },
+    {
+      name: 'Hebotechno',
+      description: 'Importadora de productos europeos para motos',
+      website: 'https://mundohebotech.com',
+      isFav: false,
+    },
+  ];
+
+  $: favDistribuitors = distribuitors.filter(
+    (distribuidor) => distribuidor.isFav
+  );
+
+  $: regularDistribuitors = distribuitors.filter(
+    (distribuidor) => !distribuidor.isFav
+  );
+</script>
+
+<style>
+</style>
+
+<div class="container-fluid mt-5 mb-5">
+  <div class="row m-0 justify-content-center">
+    <div class="col-12 text-center">
+      <h1>Distribuidores oficiales</h1>
+    </div>
+    {#each favDistribuitors as distribuitor, i (i)}
+      <DistribuitorCard {...distribuitor} />
+    {/each}
+  </div>
+  <div class="row m-0 justify-content-around">
+    {#each regularDistribuitors as distribuitor, i (i)}
+      <DistribuitorCard {...distribuitor} />
+    {/each}
+  </div>
+</div>

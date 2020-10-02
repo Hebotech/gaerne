@@ -5,6 +5,7 @@
   import Categories from './views/Categories';
   import Contact from './views/Contact';
   import Product from './views/Product';
+  import Distribuitors from './views/Distribuitors';
 
   import Particle from 'Organisms/ParticleBackground';
   import Navbar from 'Organisms/Navbar';
@@ -39,6 +40,7 @@
       <Product name={params.name} />
     </Route>
     <Route path="/contacto" component={Contact} />
+    <Route path="/distribuidores" component={Distribuitors} />
     <MainFooter />
   </main>
   <Particle />
