@@ -8,8 +8,9 @@
   import Distribuitors from './views/Distribuitors';
 
   import Particle from 'Organisms/ParticleBackground';
-  import Navbar from 'Organisms/Navbar';
   import MainFooter from 'Organisms/MainFooter';
+  import Navbar from 'Organisms/Navbar';
+  import TopBar from 'Organisms/TopBar';
 
   let showButton = false;
 
@@ -22,10 +23,23 @@
   .main-content {
     z-index: 11;
     position: relative;
-    margin: 2em 5em;
     background-color: #fff;
     border-radius: 0px 0px 8px 8px;
+    margin: 8em 0em;
   }
+
+  @media screen and (min-width: 550px) {
+    .main-content {
+      margin: 8em 1em;
+    }
+  }
+
+  @media screen and (min-width: 770px) {
+    .main-content {
+      margin: 8em 5em;
+    }
+  }
+
   :global(h1, h2, h3, h4, h5) {
     font-family: Cousine;
     font-weight: 700;
@@ -36,6 +50,7 @@
 </style>
 
 <Router>
+  <TopBar />
   <main class="main-content">
     <Navbar />
     <Route path="/" component={Home} />

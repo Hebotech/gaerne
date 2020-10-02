@@ -45,13 +45,15 @@
 </script>
 
 <style>
-  /* your styles go here */
+  .product-list h2 {
+    text-decoration: underline #f4d316;
+  }
 </style>
 
 <div class="container-fluid">
   <HeroHeader />
   <CategoriesListing />
-  <div class="col-12 text-center">
+  <div class="col-12 text-center product-list">
     <h2>Productos favoritos</h2>
   </div>
   <ProductListing {products} />

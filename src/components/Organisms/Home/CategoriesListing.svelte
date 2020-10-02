@@ -1,6 +1,5 @@
 <script>
   import CategoryCard from 'Molecules/Home/CategoryCard';
-  import { onMount } from 'svelte';
 
   let cards = [
     {
@@ -22,9 +21,13 @@
 </script>
 
 <style>
+  .categories-listing h2 {
+    text-decoration: underline #f4d316;
+  }
 </style>
 
-<div class="row p-5 justify-content-center mt-4 mb-4 text-center">
+<div
+  class="row categories-listing p-5 justify-content-center mt-4 mb-4 text-center">
   <div class="col-12">
     <h2>Categories</h2>
   </div>

@@ -56,8 +56,38 @@
     text-decoration: underline;
     transition: all ease-in 0.2s;
   }
+
+  .logo-container {
+    background-color: #131313;
+    clip-path: polygon(97% 0, 100% 20%, 100% 100%, 0 100%, 0 0);
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+  }
+
+  @media screen and (min-width: 550px) {
+    .logo-container {
+      bottom: 0;
+    }
+  }
+
+  @media screen and (min-width: 770px) {
+    .logo-container {
+      bottom: 0;
+    }
+  }
+
+  .logo-container img {
+    padding: 3%;
+  }
 </style>
 
+<div class="logo-container row m-0">
+  <div class="col-6">
+    <img src="/images/logo.png" alt="Logo Gaerne México" />
+  </div>
+  <div class="col-6" />
+</div>
 <nav class="navbar p-0 d-flex flex-row text-center">
   <div class="col">
     <button

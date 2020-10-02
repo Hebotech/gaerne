@@ -12,7 +12,6 @@
         rgba(0, 0, 0, 0.5) 100%
       ),
       url(http://www.gaerne.com/img_web/bg-contacts.jpg);
-    /* url(/images/gaerne.jpg); */
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
