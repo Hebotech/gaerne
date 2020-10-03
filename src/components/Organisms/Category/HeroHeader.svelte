@@ -10,12 +10,15 @@
     background-position: center center;
     background-size: cover;
     clip-rule: evenodd;
-    clip-path: polygon(4% 0, 100% 0, 100% 85%, 96% 100%, 0 100%, 0 12%);
+    clip-path: polygon(0% 0, 100% 0, 100% 85%, 96% 100%, 0 100%, 0 12%);
     color: white;
     transition: all 0.5s ease-in;
   }
   .hero-category h1 {
     font-family: Cousine;
+  }
+  .hero-category p {
+    font-family: Open Sans;
   }
 
   .hero-category:hover {
