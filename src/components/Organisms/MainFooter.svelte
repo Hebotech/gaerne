@@ -30,9 +30,9 @@
 
 <!-- markup (zero or more items) goes here -->
 <footer class="container-fluid main-footer">
-  <div class="row brand justify-content-center ">
-    <div class="col-3 text-center">
-      <img src="/images/logo.png" alt="logo gaerne" class="img-fluid">
+  <div class="row brand justify-content-center">
+    <div class="col-md-4 col-lg-3 col-6 text-center">
+      <img src="/images/logo.png" alt="logo gaerne" class="img-fluid m-auto m-md-0">
       <h3 >
         THE BOOTS CO
       </h3>

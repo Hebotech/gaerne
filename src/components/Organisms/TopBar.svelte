@@ -44,10 +44,10 @@
 <!-- markup (zero or more items) goes here -->
 
 <div class="logo-container row m-0 p-4">
-  <div class="col-6">
+  <div class="col-md-6 col-12 d-flex justify-content-center my-md-0 my-3 justify-content-md-between">
     <img src="/images/logo.png" alt="Logo Gaerne México" />
   </div>
-  <div class="col-6 cta-column d-flex flex-column align-items-end justify-content-center" >
+  <div class="col-md-6 col-12 cta-column d-flex flex-column align-items-md-end align-items-center justify-content-center" >
     <button>
       Ser distribuidor
     </button>

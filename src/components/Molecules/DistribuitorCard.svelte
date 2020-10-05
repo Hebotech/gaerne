@@ -66,7 +66,7 @@
 
 <!-- markup (zero or more items) goes here -->
 
-<div class={`p-md-3 p-1 ${isFav ? 'col-md-4  col-12' : 'col-md-3 col-6'}`}>
+<div class={`p-md-3 p-1 ${isFav ? 'col-lg-4 col-md-6 col-12' : 'col-lg-3 col-md-4 col-6'}`}>
   <div  class="card" class:isFav>
     <div class="card-content">
       <h5 class="card-title">
