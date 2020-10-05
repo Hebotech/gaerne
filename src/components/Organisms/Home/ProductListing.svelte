@@ -10,7 +10,7 @@
 </style>
 
 <div
-  class="row pl-5 pr-5 pt-5 pb-5 m-0 justify-content-around align-items-stretch">
+  class="row pl-md-5 pr-md-5 pr-2 pl-2 pt-0 pb-5 m-0 justify-content-around align-items-stretch">
   {#if isCategory}
     <div class="col-12 text-center">
       <h2>Nueva temporada</h2>

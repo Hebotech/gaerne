@@ -64,7 +64,7 @@
       on:click={() => navigate('/')}
       class:active={pathUri === '/'}
       class="nav-link">
-      Home
+      Inicio
     </button>
   </div>
   <div class="col">

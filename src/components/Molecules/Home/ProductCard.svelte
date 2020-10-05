@@ -31,7 +31,8 @@
   }
 </style>
 
-<div class="col-md-3 col-4 mt-md-3 mb-md-3 align-self text-center product-col">
+<div
+  class="col-lg-3 col-md-4 col-6 mt-md-3 mb-md-3 align-self text-center product-col">
   <div class="card">
     <div class="card-img-top">
       <Link to={`/producto/${product.name}`}>
