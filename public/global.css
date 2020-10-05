@@ -16,6 +16,10 @@ body {
   text-shadow: -3px 0 red;
 }
 
+.main-content .container-fluid {
+  background-color: #fff;
+}
+
 .product-col .card .link-to {
   color: #000;
   font-family: Cousine;

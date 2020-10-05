@@ -82,7 +82,7 @@
 <style>
 </style>
 
-<div class="container-fluid mt-5 mb-5">
+<div class="container-fluid pt-5 pb-5">
   <div class="row m-0 justify-content-center">
     <div class="col-12 text-center">
       <h1>Premium</h1>

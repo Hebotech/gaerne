@@ -23,7 +23,6 @@
   .main-content {
     z-index: 11;
     position: relative;
-    background-color: #fff;
     border-radius: 0px 0px 8px 8px;
     margin: 8em 0em;
   }
@@ -36,7 +35,7 @@
 
   @media screen and (min-width: 770px) {
     .main-content {
-      margin: 8em 5em;
+      margin: 3em 5em;
     }
   }
 
@@ -50,8 +49,8 @@
 </style>
 
 <Router>
-  <TopBar />
   <main class="main-content">
+    <TopBar />
     <Navbar />
     <Route path="/" component={Home} />
     <Route path="/categoria/:name" let:params>
