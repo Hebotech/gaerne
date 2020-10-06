@@ -8,7 +8,7 @@
     background-position: bottom center;
     background-size: contain;
     background-repeat: no-repeat;
-    background-color: #131313;
+    background-color: #000;
     clip-path: polygon(97% 0, 100% 20%, 100% 100%, 0 100%, 0 0);
     width: 100%;
   }

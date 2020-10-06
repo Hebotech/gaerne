@@ -1,5 +1,14 @@
 <script>
-  // your script goes here
+  import { onDestroy } from 'svelte';
+  import { animationPlayed } from 'Store/index';
+
+  let animationStatus;
+
+  const unsubscribe = animationPlayed.subscribe((value) => {
+    animationStatus = value;
+  });
+
+  onDestroy(unsubscribe);
 </script>
 
 <style>

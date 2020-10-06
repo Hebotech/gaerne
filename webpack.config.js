@@ -18,6 +18,7 @@ module.exports = {
       Organisms: path.resolve(__dirname, './src/components/Organisms'),
       Utilities: path.resolve(__dirname, './src/components/Utilities'),
       Lib: path.resolve('./src/lib'),
+      Store: path.resolve('./src/store'),
       svelte: path.resolve('node_modules', 'svelte'),
     },
     extensions: ['.mjs', '.js', '.svelte'],
