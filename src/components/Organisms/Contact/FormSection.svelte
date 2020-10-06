@@ -1,5 +1,6 @@
 <script>
   import ContactForm from 'Molecules/Contact/ContactForm';
+  import { scale } from 'svelte/transition';
 </script>
 
 <style>
@@ -11,7 +12,7 @@
 </style>
 
 <!-- markup (zero or more items) goes here -->
-<div class="row justify-content-center align-items-center">
+<div transition:scale class="row justify-content-center align-items-center">
   <div class="col-md-6 col-12">
     <ContactForm/>
   </div>

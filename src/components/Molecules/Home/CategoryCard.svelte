@@ -1,6 +1,11 @@
 <script>
+  import { slide, fly, blur } from 'svelte/transition';
   import { navigate } from 'svelte-routing';
+
   export let card;
+  export let cardIndex;
+
+  $: delay = cardIndex * 500;
 </script>
 
 <style>
@@ -61,7 +66,9 @@
 
 <div
   class="col justify-content-center d-flex align-items-center"
-  style={`background-image: radial-gradient(circle, rgba(0,0,0,0.6) 05%, rgba(0,0,0,0.0) 100%),url(${card.image})`}>
+  style={`background-image: radial-gradient(circle, rgba(0,0,0,0.6) 05%, rgba(0,0,0,0.0) 100%),url(${card.image})`}
+  in:slide={{ delay, y: 500, duration: 1000 }}
+  out:fly>
   <div>
     <h5>{card.name}</h5>
     <p>{card.description}</p>

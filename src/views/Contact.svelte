@@ -1,5 +1,7 @@
 <script>
   import FormSection from 'Organisms/Contact/FormSection';
+
+  import { blur } from 'svelte/transition';
 </script>
 
 <style>
@@ -23,12 +25,12 @@
   }
 </style>
 
-<!-- markup (zero or more items) goes here -->
-<div class="container-fluid p-5 text-center d-flex flex-column contact-view justify-content-center">
-  <div class="row m-0">
+<div
+  class="container-fluid p-5 text-center d-flex flex-column contact-view justify-content-center">
+  <div transition:blur class="row m-0">
     <div class="col-12">
       <h1>Contacto</h1>
     </div>
   </div>
-  <FormSection/>
+  <FormSection />
 </div>

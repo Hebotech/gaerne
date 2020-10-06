@@ -88,7 +88,7 @@
       <h1>Premium</h1>
     </div>
     {#each favDistribuitors as distribuitor, i (i)}
-      <DistribuitorCard {...distribuitor} />
+      <DistribuitorCard {...distribuitor} {i} />
     {/each}
   </div>
   <div class="row m-0 justify-content-center">
@@ -96,7 +96,7 @@
       <h1>Distribuidores</h1>
     </div>
     {#each regularDistribuitors as distribuitor, i (i)}
-      <DistribuitorCard {...distribuitor} />
+      <DistribuitorCard {...distribuitor} {i} />
     {/each}
   </div>
 </div>

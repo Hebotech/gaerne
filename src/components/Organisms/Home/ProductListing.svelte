@@ -17,6 +17,6 @@
     </div>
   {/if}
   {#each products as product, productIndex (productIndex)}
-    <ProductCard {product} />
+    <ProductCard {product} {productIndex} />
   {/each}
 </div>

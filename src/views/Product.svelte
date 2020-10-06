@@ -1,5 +1,6 @@
 <script>
   import { navigate } from 'svelte-routing';
+
   import ProductExperience from 'Organisms/Product/ProductExperience';
   import RelatedProducts from 'Organisms/Product/RelatedProducts';
 
@@ -91,7 +92,7 @@
 
 <div class="container-fluid text-center">
   <div class="row justify-content-end">
-    <div class="col-4 label">
+    <div class="col-md-4 col-7 label">
       <h4>
         <span on:click={()=>navigate(`/categoria/${category.name}`)}>
           {category.name}

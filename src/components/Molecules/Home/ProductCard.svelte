@@ -1,6 +1,11 @@
 <script>
   import { Link } from 'svelte-routing';
+  import { fly, blur } from 'svelte/transition';
+
   export let product;
+  export let productIndex;
+
+  $: delay = productIndex * 250;
 </script>
 
 <style>
@@ -33,7 +38,7 @@
 
 <div
   class="col-lg-3 col-md-4 col-6 mt-md-3 mb-md-3 align-self text-center product-col">
-  <div class="card">
+  <div class="card" in:fly={{ delay, y: 100 }} out:blur>
     <div class="card-img-top">
       <Link to={`/producto/${product.name}`}>
         <img

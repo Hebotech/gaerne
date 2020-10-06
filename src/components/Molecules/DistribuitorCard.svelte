@@ -3,6 +3,11 @@
   export let description;
   export let website;
   export let isFav;
+  export let dist;
+  export let i;
+
+  import { scale } from 'svelte/transition';
+  $: delay = i * 200;
 </script>
 
 <style>
@@ -66,8 +71,8 @@
 
 <!-- markup (zero or more items) goes here -->
 
-<div class={`p-md-3 p-1 ${isFav ? 'col-lg-4 col-md-6 col-12' : 'col-lg-3 col-md-4 col-6'}`}>
-  <div  class="card" class:isFav>
+<div  class={`p-md-3 p-1 ${isFav ? 'col-lg-4 col-md-6 col-12' : 'col-lg-3 col-md-4 col-6'}`}>
+  <div transition:scale={{delay}} class="card" class:isFav>
     <div class="card-content">
       <h5 class="card-title">
         {name}

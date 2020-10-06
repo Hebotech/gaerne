@@ -27,11 +27,11 @@
 </style>
 
 <div
-  class="row categories-listing p-md-5 p-3 justify-content-center mt-4 mb-4 text-center">
+  class="row categories-listing px-md-5 p-3 justify-content-center mt-4 mb-4 text-center">
   <div class="col-12">
     <h2>Categories</h2>
   </div>
   {#each cards as card, cardIndex (cardIndex)}
-    <CategoryCard {card} />
+    <CategoryCard {card} {cardIndex} />
   {/each}
 </div>

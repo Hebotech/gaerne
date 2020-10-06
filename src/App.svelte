@@ -24,7 +24,7 @@
     z-index: 11;
     position: relative;
     border-radius: 0px 0px 8px 8px;
-    margin: 8em 0em;
+    margin: 2em 0em;
   }
 
   @media screen and (min-width: 550px) {

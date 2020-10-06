@@ -30,7 +30,7 @@
 <div
   style={`background-image: radial-gradient(circle, rgba(0,0,0,0.6) 05%, rgba(0,0,0,0.0) 100%), url(${image});`}
   class="row m-0 hero-category text-center justify-content-center align-items-center">
-  <div class="col-6">
+  <div class="col-md-6 col-10">
     <h1>{name}</h1>
     <p>{description}</p>
   </div>

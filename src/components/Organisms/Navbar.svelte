@@ -11,6 +11,8 @@
   }
 
   $: pathUri = routePath ? routePath.uri : '';
+
+  let openMenu = false;
 </script>
 
 <style>
@@ -56,47 +58,75 @@
     text-decoration: underline;
     transition: all ease-in 0.2s;
   }
+
+  .navbar .navbar-toggler {
+    vertical-align: sub;
+    border: black solid 2px;
+    margin: 0.5em 0.5em 0.5em auto;
+    transition: all 0.3s ease-out;
+  }
+  .navbar .navbar-toggler:hover,
+  .collapsed {
+    transition: all 0.3s ease-in;
+    background-color: #333;
+    color: white;
+  }
 </style>
 
-<nav class="navbar p-0 d-flex flex-row text-center">
-  <div class="col">
-    <button
-      on:click={() => navigate('/')}
-      class:active={pathUri === '/'}
-      class="nav-link">
-      Inicio
-    </button>
-  </div>
-  <div class="col">
-    <button
-      on:click={() => navigate('/categoria/enduro')}
-      class:active={pathUri.includes('/categoria')}
-      class="nav-link">
-      Categorías
-    </button>
-  </div>
-  <div class="col">
-    <button
-      on:click={() => navigate('/producto/SG-12')}
-      class:active={pathUri.includes('/producto')}
-      class="nav-link">
-      Productos
-    </button>
-  </div>
-  <div class="col">
-    <button
-      on:click={() => navigate('/distribuidores')}
-      class:active={pathUri.includes('/distribuidores')}
-      class="nav-link">
-      distribuidores
-    </button>
-  </div>
-  <div class="col">
-    <button
-      on:click={() => navigate('/contacto')}
-      class:active={pathUri.includes('/contacto')}
-      class="nav-link">
-      Contacto
-    </button>
+<nav class="navbar navbar-expand-lg p-0 d-flex flex-row text-center">
+  <button
+    class="navbar-toggler text-right"
+    type="button"
+    data-toggle="collapse"
+    data-target="#navbarNav"
+    aria-controls="navbarNav"
+    aria-expanded="false"
+    on:click={() => (openMenu = !openMenu)}
+    class:collapsed={openMenu}
+    aria-label="Toggle navigation">
+    Menú
+    <i class="fas fa-chevron-circle-down navbar-toggler-icon" />
+  </button>
+  <div class:show={openMenu} class="collapse navbar-collapse" id="navbarNav">
+    <div class="col nav-item">
+      <button
+        on:click={() => navigate('/')}
+        class:active={pathUri === '/'}
+        class="nav-link">
+        Inicio
+      </button>
+    </div>
+    <div class="col nav-item">
+      <button
+        on:click={() => (navigate('/categoria/enduro'), (openMenu = false))}
+        class:active={pathUri.includes('/categoria')}
+        class="nav-link">
+        Categorías
+      </button>
+    </div>
+    <div class="col nav-item">
+      <button
+        on:click={() => (navigate('/producto/SG-12'), (openMenu = false))}
+        class:active={pathUri.includes('/producto')}
+        class="nav-link">
+        Productos
+      </button>
+    </div>
+    <div class="col nav-item">
+      <button
+        on:click={() => (navigate('/distribuidores'), (openMenu = false))}
+        class:active={pathUri.includes('/distribuidores')}
+        class="nav-link">
+        distribuidores
+      </button>
+    </div>
+    <div class="col">
+      <button
+        on:click={() => (navigate('/contacto'), (openMenu = false))}
+        class:active={pathUri.includes('/contacto')}
+        class="nav-link">
+        Contacto
+      </button>
+    </div>
   </div>
 </nav>
