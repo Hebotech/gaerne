@@ -1,5 +1,6 @@
 <script>
   import { onMount } from 'svelte';
+  import { productsStore } from '../store/products';
 
   import { animationPlayed } from 'Store/index';
 
@@ -91,46 +92,6 @@
   });
 
   let ready = true;
-
-  let products = [
-    {
-      name: 'SG-12',
-      description: 'Lo mejor que puede haber en la historia',
-      images: ['http://www.gaerne.com/images/articoli/boots/2174_073.jpg'],
-    },
-    {
-      name: 'SG-14',
-      description: 'Lo mejor que puede haber en la historia',
-      images: ['http://www.gaerne.com/images/articoli/boots/2174_079.jpg'],
-    },
-
-    {
-      name: 'SH-212',
-      description: 'Lo mejor que puede haber en la historia',
-      images: ['http://www.gaerne.com/images/articoli/boots/2174_073.jpg'],
-    },
-    {
-      name: 'SH3812',
-      description: 'Lo mejor que puede haber en la historia',
-      images: ['http://www.gaerne.com/images/articoli/boots/2174_079.jpg'],
-    },
-    {
-      name: 'SH315',
-      description: 'Lo mejor que puede haber en la historia',
-      images: ['http://www.gaerne.com/images/articoli/boots/2174_079.jpg'],
-    },
-
-    {
-      name: 'SH-319',
-      description: 'Lo mejor que puede haber en la historia',
-      images: ['http://www.gaerne.com/images/articoli/boots/2174_073.jpg'],
-    },
-    {
-      name: 'SH-320',
-      description: 'Lo mejor que puede haber en la historia',
-      images: ['http://www.gaerne.com/images/articoli/boots/2174_079.jpg'],
-    },
-  ];
 </script>
 
 <style>
@@ -145,5 +106,13 @@
   <div class="col-12 text-center product-list">
     <h2>Productos favoritos</h2>
   </div>
-  <ProductListing {products} />
+  {#if $productsStore}
+    <ProductListing products={$productsStore} />
+  {:else}
+    <div class="col-6 text-center">
+      <div class="spinner-border text-warning" role="status">
+        <span class="sr-only">Loading...</span>
+      </div>
+    </div>
+  {/if}
 </div>

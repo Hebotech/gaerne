@@ -3,6 +3,9 @@
 
   import ProductExperience from 'Organisms/Product/ProductExperience';
   import RelatedProducts from 'Organisms/Product/RelatedProducts';
+  import { productsStore } from '../store/products';
+
+  import ProductCard from '../components/Molecules/Home/ProductCard.svelte';
 
   export let name;
 
@@ -48,18 +51,32 @@
       },
     ],
   };
-  let product = {
-    name: 'SG-12',
-    shortDescription: 'Lo mejor que puede haber en la historia',
-    longDescription:
-      'GAERNE IS PROUD TO REPORT THAT MAGAZINES WORLD WIDE HAVE PUT OUR SG-12 THROUGH RIGORUS TESTS AND CAME BACK WITH 5 STAR REVIEWS CLAIMING IT THE MOST DURABLE, COMFORTABLE AND SUPPORTIVE BOOT MADE TO DATE.',
+
+  // let product;
+  // let asyncStatus;
+  $: product = $productsStore
+    ? $productsStore.find((producta) => producta.slug === name)
+    : null;
+
+  let mockProduct = {
+    name: '',
+    description: '',
+    short_description: '',
     images: [
-      'http://www.gaerne.com/images/articoli/boots/2174_073.jpg',
-      'http://www.gaerne.com/images/articoli/boots/2174_079.jpg',
-      'http://www.gaerne.com/images/articoli/boots/2174_078.jpg',
-      'http://www.gaerne.com/images/articoli/boots/2174-053--sito.jpeg',
+      {
+        src: '/images/loader_product.png',
+      },
     ],
   };
+
+  $: products = $productsStore
+    ? $productsStore.filter(
+        (producta) =>
+          producta.meta_data.find((meta) => meta.key === 'estilo_gaerne')
+            .value ===
+          product.meta_data.find((meta) => meta.key === 'estilo_gaerne').value
+      )
+    : null;
 </script>
 
 <style>
@@ -92,15 +109,34 @@
 
 <div class="container-fluid text-center">
   <div class="row justify-content-end">
-    <div class="col-md-4 col-7 label">
-      <h4>
-        <span on:click={()=>navigate(`/categoria/${category.name}`)}>
-          {category.name}
-        </span>
-           / {product.name}
-      </h4>
-    </div>
+    {#if $productsStore}
+      {#if product !== undefined}
+        <div class="col-md-7 col-7 label">
+          <h4>
+            <span
+              on:click={() => navigate(`/categoria/${product.meta_data.find((meta) => meta.key === 'estilo_gaerne').value}`)}>
+              {product.meta_data.find((meta) => meta.key === 'estilo_gaerne').value}
+            </span>
+            /
+            {product.name}
+          </h4>
+        </div>
+        <ProductExperience {...product} />
+        {#if products === []}
+          <RelatedProducts products={$productsStore} />
+        {:else}
+          <RelatedProducts {products} />
+        {/if}
+      {:else}{navigate('/')}{/if}
+    {:else}
+      <div class="col-md-12 col-7 label">
+        <h4>
+          <span>
+            <img src="/images/logo.png" class="img-fluid" alt="asdasda" />
+          </span>
+        </h4>
+      </div>
+      <ProductExperience {...mockProduct} />
+    {/if}
   </div>
-<ProductExperience {...product}/>
-<RelatedProducts products={category.products}/>
 </div>

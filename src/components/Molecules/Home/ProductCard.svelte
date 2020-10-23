@@ -40,9 +40,9 @@
   class="col-lg-3 col-md-4 col-6 mt-md-3 mb-md-3 align-self text-center product-col">
   <div class="card" in:fly={{ delay, y: 100 }} out:blur>
     <div class="card-img-top">
-      <Link to={`/producto/${product.name}`}>
+      <Link to={`/producto/${product.slug}`}>
         <img
-          src={product.images[0]}
+          src={product.images[0].src}
           alt={`Gaerne Bota ${product.name}`}
           class="img-fluid" />
       </Link>
@@ -53,11 +53,11 @@
           getProps={() => {
             return { class: 'link-to' };
           }}
-          to={`/producto/${product.name}`}>
+          to={`/producto/${product.slug}`}>
           {product.name}
         </Link>
       </h5>
-      <p class="card-text">{product.description}</p>
+      {@html product.short_description}
     </div>
   </div>
 </div>

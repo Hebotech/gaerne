@@ -2,23 +2,13 @@
   import { slide, fly, blur } from 'svelte/transition';
 
   export let name;
-  export let shortDescription;
+  export let short_description;
   export let images;
-  export let longDescription;
+  export let description;
 
   let zoom = false;
 
-  $: imagesArray = images.map((image, imageIndex) => {
-    return {
-      image,
-      imageIndex,
-    };
-  });
-
   $: activeIndex = 0;
-  $: inActiveImages = imagesArray.filter(
-    (image) => image.imageIndex !== activeIndex
-  );
 
   function activateImage(imageIndex) {
     activeIndex = imageIndex;
@@ -81,16 +71,18 @@
     class={`product-description col-md-4 col-12 text-md-right text-center ${zoom ? 'order-md-1' : 'order-md-0'} order-1`}>
     <div class="contentt align-self-end">
       <h1>{name}</h1>
-      <h3>{shortDescription}</h3>
-      <p>{longDescription}</p>
+      <h3>
+        {@html short_description}
+      </h3>
+
       <div class="product-showcase">
-        {#each inActiveImages as image (image.imageIndex)}
+        {#each images as image, imageIndex (imageIndex)}
           <div
-            in:fly={{ delay: image.imageIndex * 200 }}
+            in:fly={{ delay: imageIndex * 200 }}
             out:fly
-            on:click={activateImage(image.imageIndex)}
+            on:click={activateImage(imageIndex)}
             class="inactive-image"
-            style={`background-image: url(${image.image})`} />
+            style={`background-image: url(${image.src})`} />
         {/each}
       </div>
     </div>
@@ -98,14 +90,17 @@
   <div
     on:click={() => (zoom = !zoom)}
     class={`col-12 product-images order-0 ${zoom ? 'oder-md-0' : 'col-md-8 order-md-1'}`}>
-    {#each imagesArray as image (image.imageIndex)}
+    {#each images as image, imageIndex (imageIndex)}
       <img
         in:blur={{ duration: 1000 }}
         out:blur
         loading="lazy"
-        src={image.image}
+        src={image.src}
         alt={`Gaerne botas ${name}`}
         class="img-fluid" />
     {/each}
+  </div>
+  <div class="col-12 mt-4 order-3">
+    {@html description}
   </div>
 </div>
