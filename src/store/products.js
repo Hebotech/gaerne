@@ -14,10 +14,11 @@ async function fetchProducts(set) {
   try {
     let { data: { data: products } } = await axios.get('http://localhost:9000/gaerne');
 
-    let productsArray = products.filter((product) => product.meta_data.find(data => data.key === 'estilo_gaerne'))
+    // let productsArray = products.filter((product) => product.meta_data.find(data => data.key === 'estilo_gaerne'))
+    // console.log(products)
 
 
-    return set(productsArray)
+    return set(products)
     
   } catch (error) {
    return(error) 

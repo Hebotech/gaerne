@@ -106,6 +106,7 @@
   <div class="col-12 text-center product-list">
     <h2>Productos favoritos</h2>
   </div>
+
   {#if $productsStore}
     <ProductListing products={$productsStore} />
   {:else}

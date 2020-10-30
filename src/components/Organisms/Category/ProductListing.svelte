@@ -11,6 +11,6 @@
 <!-- markup (zero or more items) goes here -->
 <div class="row m-0 justify-content align-itmes-center">
   {#each products as product, productIndex (productIndex)}
-  <ProductCard {product} />
+    <ProductCard {product} />
   {/each}
 </div>

@@ -3,6 +3,10 @@
 
   export let isCategory;
   export let products;
+
+  $: {
+    console.log(products);
+  }
 </script>
 
 <style>
