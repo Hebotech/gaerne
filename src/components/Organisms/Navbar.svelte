@@ -78,6 +78,22 @@
     background-color: #333;
     color: white;
   }
+
+  .dropdown-menu {
+    width: 100%;
+    text-align: center;
+  }
+
+  .dropdown-item:hover {
+    background-color: #f5d315;
+    font-weight: 600;
+    text-decoration: underline;
+    transition: all ease-out 0.3s;
+  }
+
+  .dropdown-item {
+    transition: all ease-in 0.3s;
+  }
 </style>
 
 <nav class="navbar navbar-expand-lg p-0 d-flex flex-row text-center">

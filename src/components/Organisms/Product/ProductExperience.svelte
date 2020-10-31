@@ -36,8 +36,12 @@
     background-image: url(/background-line.svg);
     background-size: contain;
     background-repeat: no-repeat;
-    background-position: bottom center;
+    background-position: bottom right;
     padding: 15% 15% 15% 0;
+  }
+
+  .contentt h1 {
+    text-align: right;
   }
   .inactive-image {
     padding: 15%;
@@ -67,7 +71,7 @@
 
 <div class="row position-relative p-3">
   <div
-    class={`product-description col-md-4 col-12 text-md-right text-center ${zoom ? 'order-md-1' : 'order-md-0'} order-1`}>
+    class={`product-description col-md-4 flex-wrap col-12 text-md-right text-center ${zoom ? 'order-md-1' : 'order-md-0'} order-1`}>
     <div class="contentt align-self-end">
       <h1>{name}</h1>
       <h3>

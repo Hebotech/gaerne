@@ -28,7 +28,8 @@
         (producta) =>
           producta.meta_data.find((meta) => meta.key === 'estilo_gaerne')
             .value ===
-          product.meta_data.find((meta) => meta.key === 'estilo_gaerne').value
+            product.meta_data.find((meta) => meta.key === 'estilo_gaerne')
+              .value && producta.slug !== name
       )
     : null;
 </script>
@@ -76,8 +77,9 @@
           </h4>
         </div>
         <ProductExperience {...product} />
-        {#if products === []}
-          <RelatedProducts products={$productsStore} />
+        {#if products.length === 0}
+          <RelatedProducts
+            products={$productsStore.filter((product) => product.slug !== name)} />
         {:else}
           <RelatedProducts {products} />
         {/if}
