@@ -1,9 +1,10 @@
 <script>
   import { navigate } from 'svelte-routing';
+  import { productsStore } from '../store/products';
 
   import ProductExperience from 'Organisms/Product/ProductExperience';
   import RelatedProducts from 'Organisms/Product/RelatedProducts';
-  import { productsStore } from '../store/products';
+  import Loader from 'Atoms/Loader';
 
   export let name;
 
@@ -82,14 +83,9 @@
         {/if}
       {:else}{navigate('/')}{/if}
     {:else}
-      <div class="col-md-12 col-7 label">
-        <h4>
-          <span>
-            <img src="/images/logo.png" class="img-fluid" alt="asdasda" />
-          </span>
-        </h4>
+      <div class="col-12 my-5 d-flex justify-content-center">
+        <Loader />
       </div>
-      <ProductExperience {...mockProduct} />
     {/if}
   </div>
 </div>

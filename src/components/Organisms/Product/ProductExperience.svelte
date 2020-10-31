@@ -59,7 +59,6 @@
   .product-showcase {
     display: flex;
     flex-flow: wrap row;
-    justify-content: space-around;
   }
   .product-images {
     cursor: pointer;

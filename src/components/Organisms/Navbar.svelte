@@ -121,12 +121,12 @@
         class:show={openDropdown}
         transition:slide>
         {#if $productsStore}
-          {#each $productsStore as product, productIndex (productIndex)}
+          {#each [...new Set($productsStore.map((product) => product.meta_data.find((meta) => meta.key === 'estilo_gaerne').value))].sort() as product, productIndex (productIndex)}
             <button
               class="dropdown-item"
               type="button"
-              on:click={() => (navigate(`/categoria/${product.meta_data.find((meta) => meta.key === 'estilo_gaerne').value}`), (openMenu = false), (openDropdown = false))}>
-              {product.meta_data.find((meta) => meta.key === 'estilo_gaerne').value}
+              on:click={() => (navigate(`/categoria/${product}`), (openMenu = false), (openDropdown = false))}>
+              {product}
             </button>
           {/each}
         {:else}

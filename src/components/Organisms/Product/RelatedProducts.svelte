@@ -16,11 +16,21 @@
     flex-flow: nowrap row;
     overflow: auto;
   }
+
+  .title-section {
+    color: white;
+    background: #000;
+  }
+  .title-section h4 {
+    margin-block-end: 0;
+  }
 </style>
 
-<h4>Productos relacionados</h4>
 <div class="container-fluid m-0 p-0 related-products-container">
-  <div class="row product-listing text-center">
+  <div class="col-12 text-center title-section m-0 py-2">
+    <h4>Productos relacionados</h4>
+  </div>
+  <div class="row m-0 product-listing text-center justify-content-center">
     {#each products as product, productIndex (productIndex)}
       <ProductCard {product} />
     {/each}

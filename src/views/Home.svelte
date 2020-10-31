@@ -7,6 +7,7 @@
   import HeroHeader from 'Organisms/Home/HeroHeader';
   import CategoriesListing from 'Organisms/Home/CategoriesListing';
   import ProductListing from 'Organisms/Home/ProductListing';
+  import Loader from 'Atoms/Loader';
 
   import gsap from 'gsap';
   import ScrollTrigger from 'gsap/ScrollTrigger';
@@ -110,10 +111,8 @@
   {#if $productsStore}
     <ProductListing products={$productsStore} />
   {:else}
-    <div class="col-6 text-center">
-      <div class="spinner-border text-warning" role="status">
-        <span class="sr-only">Loading...</span>
-      </div>
+    <div class="row m-0 align-items-center justify-content-center">
+      <Loader />
     </div>
   {/if}
 </div>
