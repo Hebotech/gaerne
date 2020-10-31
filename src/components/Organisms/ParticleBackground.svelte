@@ -89,7 +89,7 @@
     width: 100vw;
     height: 100vh;
     background-color: #323840;
-    background-image: url('http://www.gaerne.com/images/bg/boots1.jpg');
+    background-image: url('/images/background/main.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 50% 50%;

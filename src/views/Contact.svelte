@@ -13,7 +13,7 @@
         rgba(0, 0, 0, 0.3) 0%,
         rgba(0, 0, 0, 0.5) 100%
       ),
-      url(http://www.gaerne.com/img_web/bg-contacts.jpg);
+      url(/images/background/bg-contacts.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
