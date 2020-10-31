@@ -5,7 +5,7 @@
   export let product;
   export let productIndex;
 
-  $: delay = productIndex * 250;
+  $: delay = productIndex * 150;
 </script>
 
 <style>

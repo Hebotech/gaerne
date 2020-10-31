@@ -5,7 +5,7 @@
   export let card;
   export let cardIndex;
 
-  $: delay = cardIndex * 500;
+  $: delay = cardIndex * 120;
 </script>
 
 <style>
@@ -74,7 +74,7 @@
     <p>{card.description}</p>
     <button
       class="main-btn"
-      on:click={() => navigate(`/categoria/${card.name}`)}>
+      on:click={() => navigate(`/categoria/${card.slug}`)}>
       Ir ahora
     </button>
   </div>

@@ -4,18 +4,23 @@
   let cards = [
     {
       name: 'Todoterreno',
-      description: 'Lo mejor que puede haber en la historia',
-      image: 'http://www.gaerne.com/images/pictures/post-sg12-.jpg',
+      description: 'El mejor calzado del mercado para todoterreno',
+      slug: 'G.VOYAGER',
+      image: '/images/banner-1.jpg',
     },
+
     {
-      name: 'Todoterreno',
-      description: 'Lo mejor que puede haber en la historia',
-      image: 'http://www.gaerne.com/images/pictures/post-sg12-.jpg',
+      name: 'Urbano',
+      description: 'El calzado de moda para tus días ocupados ',
+      slug: 'MX%20-%20Off%20Road',
+      image: '/images/banner-2.jpg',
     },
+
     {
-      name: 'Todoterreno',
-      description: 'Lo mejor que puede haber en la historia',
-      image: 'http://www.gaerne.com/images/pictures/post-sg12-.jpg',
+      name: 'Sport urban line',
+      description: 'Calzado urbano para todas tus actividades de ciudad',
+      slug: 'SPORT%20URBAN%20LINE',
+      image: '/images/banner-3.jpg',
     },
   ];
 </script>

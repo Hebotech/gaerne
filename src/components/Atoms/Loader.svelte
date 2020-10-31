@@ -42,7 +42,7 @@
   /* your styles go here */
 </style>
 
-<div class="col-md-6 col-8 my-4">
+<div class="col-md-6 col-8 my-4 mx-auto">
   <LoaderSvg />
   <div
     class="spinner-border text-warning my-4"

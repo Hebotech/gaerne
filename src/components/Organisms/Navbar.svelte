@@ -109,6 +109,7 @@
         type="button"
         id="dropdownMenu2"
         data-toggle="dropdown"
+        class:active={pathUri.includes('/categoria')}
         aria-haspopup="true"
         on:click={() => (openDropdown = !openDropdown)}
         aria-expanded="true">

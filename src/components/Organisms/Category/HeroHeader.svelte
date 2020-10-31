@@ -31,6 +31,7 @@
   style={`background-image: radial-gradient(circle, rgba(0,0,0,0.6) 05%, rgba(0,0,0,0.0) 100%), url(/images/gaerne-showcase.jpg);`}
   class="row m-0 hero-category text-center justify-content-center align-items-center">
   <div class="col-md-6 col-10">
+    <small class="mb-3">Categoría</small>
     <h1>{name}</h1>
   </div>
 </div>
