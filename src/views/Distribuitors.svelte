@@ -1,4 +1,5 @@
 <script>
+  import SvelteSeo from 'svelte-seo';
   import DistribuitorCard from 'Molecules/DistribuitorCard';
 
   let distribuitors = [
@@ -81,6 +82,10 @@
 
 <style>
 </style>
+
+<SvelteSeo
+  title="Distribuidores oficiales | Sitio Oficial Gaerne México"
+  description="Encuentra a los distribuidores oficiales de Gaerne en México y compra tus productos favoritos" />
 
 <div class="container-fluid pt-5 pb-5">
   <div class="row m-0 justify-content-center">

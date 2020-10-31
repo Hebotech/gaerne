@@ -1,4 +1,5 @@
 <script>
+  import SvelteSeo from 'svelte-seo';
   import FormSection from 'Organisms/Contact/FormSection';
 
   import { blur } from 'svelte/transition';
@@ -25,6 +26,9 @@
   }
 </style>
 
+<SvelteSeo
+  title="Contacto | Sitio Oficial Gaerne México"
+  description="Encuentra a los distribuidores oficiales de Gaerne en México y compra tus productos favoritos" />
 <div
   class="container-fluid p-5 text-center d-flex flex-column contact-view justify-content-center">
   <div transition:blur class="row m-0">

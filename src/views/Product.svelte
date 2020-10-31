@@ -1,6 +1,7 @@
 <script>
   import { navigate } from 'svelte-routing';
   import { productsStore } from '../store/products';
+  import SvelteSeo from 'svelte-seo';
 
   import ProductExperience from 'Organisms/Product/ProductExperience';
   import RelatedProducts from 'Organisms/Product/RelatedProducts';
@@ -65,6 +66,10 @@
 <div class="container-fluid text-center">
   <div class="row justify-content-end">
     {#if $productsStore}
+      <SvelteSeo
+        title={`${product.name} | Sitio Oficial Gaerne México`}
+        description={`El producto ${product.name} es el calzado perfecto para los bikers aventureros en México`}
+        openGraph={{ title: `${product.name} | Sitio Oficial Gaerne México`, description: `El producto ${product.name} es el calzado perfecto para los bikers aventureros en México`, type: 'website', images: [{ url: product.images[0].src }] }} />
       {#if product !== undefined}
         <div class="col-md-7 col-7 label">
           <h4>

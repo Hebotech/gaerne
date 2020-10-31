@@ -1,6 +1,7 @@
 <script>
   import { onMount } from 'svelte';
   import { productsStore } from '../store/products';
+  import SvelteSeo from 'svelte-seo';
 
   import { animationPlayed } from 'Store/index';
 
@@ -100,6 +101,9 @@
     text-decoration: underline #f4d316;
   }
 </style>
+
+<SvelteSeo
+  openGraph={{ title: 'Open Graph Title', description: 'Open Graph Description', url: 'https://www.example.com/page', type: 'website', images: [{ url: 'https://www.example.com/images/og-image.jpg', width: 850, height: 650, alt: 'Og Image Alt' }] }} />
 
 <div class="container-fluid">
   <HeroHeader />

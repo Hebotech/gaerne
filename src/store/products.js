@@ -13,7 +13,7 @@ function createProducts() {
 
 async function fetchProducts(set) {
   try {
-    let { data: { data: products } } = await axios.get('http://localhost:9000/gaerne');
+    let { data: { data: products } } = await axios.get('http://45.55.49.30:3000/gaerne');
 
     let productsArray = products.filter((product) => product.meta_data.find(data => data.key === 'estilo_gaerne'))
 
