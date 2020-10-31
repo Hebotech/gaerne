@@ -97,7 +97,7 @@
   <div class:show={openMenu} class="collapse navbar-collapse" id="navbarNav">
     <div class="col nav-item">
       <button
-        on:click={() => navigate('/')}
+        on:click={() => (navigate('/'), (openDropdown = false))}
         class:active={pathUri === '/'}
         class="nav-link">
         Inicio
@@ -156,7 +156,7 @@
     </div> -->
     <div class="col nav-item">
       <button
-        on:click={() => (navigate('/distribuidores'), (openMenu = false))}
+        on:click={() => (navigate('/distribuidores'), (openMenu = false), (openDropdown = false))}
         class:active={pathUri.includes('/distribuidores')}
         class="nav-link">
         distribuidores
@@ -164,7 +164,7 @@
     </div>
     <div class="col">
       <button
-        on:click={() => (navigate('/contacto'), (openMenu = false))}
+        on:click={() => (navigate('/contacto'), (openMenu = false), (openDropdown = false))}
         class:active={pathUri.includes('/contacto')}
         class="nav-link">
         Contacto
