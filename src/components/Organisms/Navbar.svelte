@@ -2,6 +2,11 @@
   import { navigate } from 'svelte-routing';
   import { getContext } from 'svelte';
   import { ROUTER } from 'svelte-routing/src/contexts';
+
+  import { slide } from 'svelte/transition';
+
+  import { productsStore } from '../../store/products';
+
   let { activeRoute } = getContext(ROUTER);
 
   let routePath;
@@ -11,6 +16,8 @@
   }
 
   $: pathUri = routePath ? routePath.uri : '';
+
+  let openDropdown = false;
 
   let openMenu = false;
 </script>
@@ -96,22 +103,57 @@
         Inicio
       </button>
     </div>
-    <div class="col nav-item">
+    <div class="col nav-item dropdown" class:show={openDropdown}>
+      <button
+        class="nav-link"
+        type="button"
+        id="dropdownMenu2"
+        data-toggle="dropdown"
+        aria-haspopup="true"
+        on:click={() => (openDropdown = !openDropdown)}
+        aria-expanded="true">
+        Categorías
+      </button>
+
+      <div
+        class="dropdown-menu"
+        aria-labelledby="dropdownMenu2"
+        class:show={openDropdown}
+        transition:slide>
+        {#if $productsStore}
+          {#each $productsStore as product, productIndex (productIndex)}
+            <button
+              class="dropdown-item"
+              type="button"
+              on:click={() => (navigate(`/categoria/${product.meta_data.find((meta) => meta.key === 'estilo_gaerne').value}`), (openMenu = false), (openDropdown = false))}>
+              {product.meta_data.find((meta) => meta.key === 'estilo_gaerne').value}
+            </button>
+          {/each}
+        {:else}
+          <div class="col-6 text-center">
+            <div class="spinner-border text-warning" role="status">
+              <span class="sr-only">Loading...</span>
+            </div>
+          </div>
+        {/if}
+      </div>
+    </div>
+    <!-- <div class="col nav-item">
       <button
         on:click={() => (navigate('/categoria/enduro'), (openMenu = false))}
         class:active={pathUri.includes('/categoria')}
         class="nav-link">
         Categorías
       </button>
-    </div>
-    <div class="col nav-item">
+    </div> -->
+    <!-- <div class="col nav-item">
       <button
         on:click={() => (navigate('/producto/SG-12'), (openMenu = false))}
         class:active={pathUri.includes('/producto')}
         class="nav-link">
         Productos
       </button>
-    </div>
+    </div> -->
     <div class="col nav-item">
       <button
         on:click={() => (navigate('/distribuidores'), (openMenu = false))}

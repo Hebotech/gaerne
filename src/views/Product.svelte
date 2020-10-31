@@ -5,55 +5,8 @@
   import RelatedProducts from 'Organisms/Product/RelatedProducts';
   import { productsStore } from '../store/products';
 
-  import ProductCard from '../components/Molecules/Home/ProductCard.svelte';
-
   export let name;
 
-  $: category = {
-    name: 'Enduro',
-    products: [
-      {
-        name: 'SG-12',
-        description: 'Lo mejor que puede haber en la historia',
-        images: ['http://www.gaerne.com/images/articoli/boots/2174_073.jpg'],
-      },
-      {
-        name: 'SG-14',
-        description: 'Lo mejor que puede haber en la historia',
-        images: ['http://www.gaerne.com/images/articoli/boots/2174_079.jpg'],
-      },
-
-      {
-        name: 'SH-212',
-        description: 'Lo mejor que puede haber en la historia',
-        images: ['http://www.gaerne.com/images/articoli/boots/2174_073.jpg'],
-      },
-      {
-        name: 'SH3812',
-        description: 'Lo mejor que puede haber en la historia',
-        images: ['http://www.gaerne.com/images/articoli/boots/2174_079.jpg'],
-      },
-      {
-        name: 'SH315',
-        description: 'Lo mejor que puede haber en la historia',
-        images: ['http://www.gaerne.com/images/articoli/boots/2174_079.jpg'],
-      },
-
-      {
-        name: 'SH-319',
-        description: 'Lo mejor que puede haber en la historia',
-        images: ['http://www.gaerne.com/images/articoli/boots/2174_073.jpg'],
-      },
-      {
-        name: 'SH-320',
-        description: 'Lo mejor que puede haber en la historia',
-        images: ['http://www.gaerne.com/images/articoli/boots/2174_079.jpg'],
-      },
-    ],
-  };
-
-  // let product;
-  // let asyncStatus;
   $: product = $productsStore
     ? $productsStore.find((producta) => producta.slug === name)
     : null;
