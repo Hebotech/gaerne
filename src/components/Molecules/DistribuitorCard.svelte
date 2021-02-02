@@ -2,13 +2,33 @@
   export let name;
   export let description;
   export let website;
-  export let isFav;
+  export let fav;
   export let dist;
   export let i;
 
   import { scale } from 'svelte/transition';
   $: delay = i * 200;
 </script>
+
+<!-- markup (zero or more items) goes here -->
+
+<div
+  class={`p-md-3 p-1 ${
+    fav ? 'col-lg-4 col-md-6 col-12' : 'col-lg-3 col-md-4 col-6'
+  }`}
+>
+  <div transition:scale={{ delay }} class="card" class:fav>
+    <div class="card-content">
+      <h5 class="card-title">
+        {name}
+      </h5>
+      <p class="card-content">
+        {website}
+      </p>
+      <a target="_blank" href={`https://${website}`}> Ir ahora </a>
+    </div>
+  </div>
+</div>
 
 <style>
   .card {
@@ -19,7 +39,7 @@
     font-family: Cousine;
   }
 
-  .card.isFav {
+  .card.fav {
     border: none;
     background-color: #f4d316;
     text-align: center;
@@ -54,7 +74,7 @@
     transition: all 0.5s ease-out;
     background-color: #333;
   }
-  .card.isFav a {
+  .card.fav a {
     background-color: #333;
     color: white;
     padding: 2% 15%;
@@ -63,26 +83,8 @@
     text-transform: uppercase;
   }
 
-  .card.isFav a:hover {
+  .card.fav a:hover {
     font-weight: bolder;
     transition: all 0.5s ease-out;
   }
 </style>
-
-<!-- markup (zero or more items) goes here -->
-
-<div  class={`p-md-3 p-1 ${isFav ? 'col-lg-4 col-md-6 col-12' : 'col-lg-3 col-md-4 col-6'}`}>
-  <div transition:scale={{delay}} class="card" class:isFav>
-    <div class="card-content">
-      <h5 class="card-title">
-        {name}
-      </h5>
-      <p class="card-content">
-        {description}
-      </p>
-      <a target="_blank" href={website}>
-        Ir ahora
-      </a>
-    </div>
-  </div>
-</div>

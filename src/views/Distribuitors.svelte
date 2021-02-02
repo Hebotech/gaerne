@@ -1,6 +1,9 @@
 <script>
   import SvelteSeo from 'svelte-seo';
   import DistribuitorCard from 'Molecules/DistribuitorCard';
+  import Loader from 'Atoms/Loader';
+
+  import { distribuidoresStore } from '../store/distribuidores';
 
   let distribuitors = [
     {
@@ -71,37 +74,50 @@
     },
   ];
 
-  $: favDistribuitors = distribuitors.filter(
-    (distribuidor) => distribuidor.isFav
-  );
+  $: favDistribuitors = $distribuidoresStore
+    ? $distribuidoresStore.filter(distribuidor => distribuidor.fav)
+    : null;
 
-  $: regularDistribuitors = distribuitors.filter(
-    (distribuidor) => !distribuidor.isFav
-  );
+  $: regularDistribuitors = $distribuidoresStore
+    ? $distribuidoresStore.filter(distribuidor => !distribuidor.fav)
+    : null;
 </script>
-
-<style>
-</style>
 
 <SvelteSeo
   title="Distribuidores oficiales | Sitio Oficial Gaerne México"
-  description="Encuentra a los distribuidores oficiales de Gaerne en México y compra tus productos favoritos" />
+  description="Encuentra a los distribuidores oficiales de Gaerne en México y compra tus productos favoritos"
+/>
 
 <div class="container-fluid pt-5 pb-5">
   <div class="row m-0 justify-content-center">
     <div class="col-12 text-center">
       <h1>Premium</h1>
     </div>
-    {#each favDistribuitors as distribuitor, i (i)}
-      <DistribuitorCard {...distribuitor} {i} />
-    {/each}
+    {#if $distribuidoresStore}
+      {#each favDistribuitors as distribuitor, i (i)}
+        <DistribuitorCard {...distribuitor} {i} />
+      {/each}
+    {:else}
+      <div class="row m-0 align-items-center justify-content-center">
+        <Loader />
+      </div>
+    {/if}
   </div>
   <div class="row m-0 justify-content-center">
     <div class="col-12 text-center">
       <h1>Distribuidores</h1>
     </div>
-    {#each regularDistribuitors as distribuitor, i (i)}
-      <DistribuitorCard {...distribuitor} {i} />
-    {/each}
+    {#if $distribuidoresStore}
+      {#each regularDistribuitors as distribuitor, i (i)}
+        <DistribuitorCard {...distribuitor} {i} />
+      {/each}
+    {:else}
+      <div class="row m-0 align-items-center justify-content-center">
+        <Loader />
+      </div>
+    {/if}
   </div>
 </div>
+
+<style>
+</style>
