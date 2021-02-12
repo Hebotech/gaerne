@@ -1,4 +1,4 @@
-<script>
+ <script>
   import CategoryCard from 'Molecules/Home/CategoryCard';
 
   let cards = [

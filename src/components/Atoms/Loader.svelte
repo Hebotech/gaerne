@@ -4,7 +4,7 @@
   import LoaderSvg from './LoaderSvg.svelte';
   import gsap from 'gsap';
   import ScrollTrigger from 'gsap/ScrollTrigger';
-  import MorphSVGPlugin from 'gsap/MorphSVG';
+  import MorphSVGPlugin from '../../lib/MorhpSVG';
 
   onMount(() => {
     gsap.registerPlugin(ScrollTrigger, MorphSVGPlugin);

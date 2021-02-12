@@ -12,7 +12,7 @@
 
   import gsap from 'gsap';
   import ScrollTrigger from 'gsap/ScrollTrigger';
-  import MorphSVGPlugin from 'gsap/MorphSVG';
+  import MorphSVGPlugin from '../lib/MorhpSVG';
 
   function finishedAnimation() {
     animationPlayed.set(true);
