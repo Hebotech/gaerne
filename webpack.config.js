@@ -4,6 +4,8 @@ const path = require('path');
 const mode = process.env.NODE_ENV || 'development';
 const prod = mode === 'production';
 
+const { preprocess } = require('./svelte.config');
+
 module.exports = {
   entry: {
     bundle: ['./src/main.js'],
@@ -15,6 +17,8 @@ module.exports = {
       Molecules: path.resolve(__dirname, './src/components/Molecules'),
       Organisms: path.resolve(__dirname, './src/components/Organisms'),
       Utilities: path.resolve(__dirname, './src/components/Utilities'),
+      Lib: path.resolve('./src/lib'),
+      Store: path.resolve('./src/store'),
       svelte: path.resolve('node_modules', 'svelte'),
     },
     extensions: ['.mjs', '.js', '.svelte'],
@@ -56,16 +60,10 @@ module.exports = {
           loader: 'svelte-loader',
           options: {
             emitCss: true,
+            preprocess,
             hotReload: true,
           },
         },
-      },
-      {
-        test: /\.css$/,
-        use: [
-          prod ? MiniCssExtractPlugin.loader : 'style-loader',
-          'css-loader',
-        ],
       },
     ],
   },
@@ -74,7 +72,9 @@ module.exports = {
 
   devServer: {
     port: 5000,
-    hotOnly: true,
+    historyApiFallback: {
+      index: 'index.html',
+    },
   },
 
   plugins: [

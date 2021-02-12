@@ -26,12 +26,18 @@
     "svelte": "^3.0.0",
     "svelte-loader": "2.13.3",
     "svelte-preprocess": "^4.3.2",
-    "webpack": "^4.30.0",
+    "webpack": "^4.46.0",
     "webpack-cli": "^3.3.0",
-    "webpack-dev-server": "^3.3.1"
+    "webpack-dev-middleware": "^3.7.2",
+    "webpack-dev-server": "^3.11.2",
+    "webpack-hot-middleware": "^2.25.0"
   },
   "dependencies": {
+    "axios": "^0.20.0",
+    "gsap": "^3.5.1",
+    "particles.js": "^2.0.0",
     "sass-loader": "^10.0.2",
-    "svelte-routing": "^1.4.2"
+    "svelte-routing": "^1.4.2",
+    "svelte-seo": "^1.0.1"
   }
 }
