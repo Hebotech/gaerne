@@ -33,9 +33,11 @@
     "webpack-hot-middleware": "^2.25.0"
   },
   "dependencies": {
+    "@beyonk/svelte-google-analytics": "^2.2.0",
     "axios": "^0.20.0",
     "gsap": "^3.5.1",
     "particles.js": "^2.0.0",
+    "prettier": "^2.2.1",
     "sass-loader": "^10.0.2",
     "svelte-routing": "^1.4.2",
     "svelte-seo": "^1.0.1"

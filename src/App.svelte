@@ -1,5 +1,7 @@
 <script>
   import { Router, Route } from 'svelte-routing';
+  import { GoogleAnalytics } from '@beyonk/svelte-google-analytics'
+
 
   import Home from './views/Home';
   import Categories from './views/Categories';
@@ -48,6 +50,9 @@
   }
 </style>
 
+<GoogleAnalytics 
+    properties={[ 'UA-129526873-4' ]} 
+    />
 <Router>
   <main class="main-content">
     <TopBar />
