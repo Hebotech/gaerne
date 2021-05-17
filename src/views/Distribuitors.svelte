@@ -31,7 +31,7 @@
 <div class="container-fluid pt-5 pb-5">
   <div class="row m-0 justify-content-center">
     <div class="col-12 text-center">
-      <h1>Premium</h1>
+      <h1>Distribuidores</h1>
     </div>
     <!-- <Map
       accessToken="pk.eyJ1IjoiaXJ2aW5nLWhlYm8iLCJhIjoiY2tvcnQ2eTJoMTF2eDJ2bXA5bThtd2kxNiJ9.u4M6pCX-ImB7amvHrhnNxQ"
