@@ -16,8 +16,10 @@
   "author": "irfdev",
   "license": "ISC",
   "devDependencies": {
+    "@beyonk/svelte-mapbox": "^7.6.0",
     "cross-env": "^5.2.0",
     "css-loader": "^2.1.1",
+    "mapbox-gl": "^1.13.1",
     "mini-css-extract-plugin": "^0.6.0",
     "node-sass": "^4.14.1",
     "sass": "^1.26.11",
@@ -34,11 +36,12 @@
   },
   "dependencies": {
     "@beyonk/svelte-google-analytics": "^2.2.0",
-    "axios": "^0.20.0",
+    "axios": "^0.21.1",
     "gsap": "^3.5.1",
     "particles.js": "^2.0.0",
     "prettier": "^2.2.1",
     "sass-loader": "^10.0.2",
+    "svelte-mapbox-gl": "^0.2.0",
     "svelte-routing": "^1.4.2",
     "svelte-seo": "^1.0.1"
   }
