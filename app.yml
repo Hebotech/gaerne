@@ -1,4 +1,4 @@
-name: Workee-frontend
+name: gaerne
 region: nyc
 static_sites:
   - build_command: |-
