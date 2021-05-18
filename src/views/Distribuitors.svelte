@@ -5,8 +5,8 @@
 
   import { distribuidoresStore } from '../store/distribuidores';
 
-  import { Map, Marker, controls, popup } from '@beyonk/svelte-mapbox';
-  const { GeolocateControl, NavigationControl, ScaleControl } = controls;
+  import { Map, Marker, controls } from '@beyonk/svelte-mapbox';
+  const { GeolocateControl, NavigationControl } = controls;
   let mapComponent;
 
   function onReady() {
@@ -56,6 +56,15 @@
             lat={distribuitor.coordinates[1]}
             lng={distribuitor.coordinates[0]}
             label={`${distribuitor.name} - ${distribuitor.address}`}
+            on:click={() => {
+              console.log(distribuitor);
+              window.open(
+                `http://maps.google.com/?q=${
+                  distribuitor.name + ' ' + distribuitor.address
+                }`,
+                '_blank'
+              );
+            }}
           >
             <svg
               width="80"
@@ -63,6 +72,15 @@
               viewBox="0 0 1027 965"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
+              on:click={() => {
+                console.log(distribuitor);
+                window.open(
+                  `http://maps.google.com/?q=${
+                    distribuitor.name + ' ' + distribuitor.address
+                  }`,
+                  '_blank'
+                );
+              }}
             >
               <ellipse
                 cx="513.5"
@@ -88,6 +106,13 @@
             lat={distribuitor.coordinates[1]}
             lng={distribuitor.coordinates[0]}
             label={`${distribuitor.name} - ${distribuitor.address}`}
+            on:click={() =>
+              window.open(
+                `http://maps.google.com/?q=${
+                  distribuitor.name + ' ' + distribuitor.address
+                }`,
+                '_blank'
+              )}
           >
             <svg
               width="45"
